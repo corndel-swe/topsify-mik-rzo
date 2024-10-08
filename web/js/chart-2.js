@@ -89,7 +89,7 @@ function createRadarCharts(container, chartDataByArtist) {
     container.appendChild(artistContainer)
 
     const datasets = chartDataByArtist[artist].map((album, index) => ({
-      label: album.label,
+      label: album.label.slice(0, 56),
       data: album.data,
       fill: true,
       backgroundColor: colors[index % colors.length],
