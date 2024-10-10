@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS playlist_tracks;
 DROP TABLE IF EXISTS playlists;
 
 CREATE TABLE playlists(
-    id integer PRIMARY KEY,
+    id integer PRIMARY KEY AUTOINCREMENT,
     user_id integer NOT NULL,
     name text NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id)
